@@ -1,0 +1,68 @@
+class Player
+{
+        private:
+                int health;
+                float x, y;
+				float x2, y2;
+                bool moving;
+				int color; 
+				float jumpHeight;
+				bool boJump;
+				int direction; //left is 0 right is 1
+				bool gun;
+				bool bullet;
+				int time;
+				bool invi;
+        public:
+				Player();
+				Player(float x1temp, float y1temp, float x2temp,float y2temp,int h, int newcolor); 
+				Player::Player(float x1temp, float y1temp, float x2temp,float y2temp,int h, int newcolor,int move, bool dir);
+				Player::Player(float x1temp, float y1temp, float x2temp,float y2temp,int h, int newcolor,int move, bool dir, bool enemy, bool isbull);
+				Player::Player(float x1temp, float y1temp, float x2temp,float y2temp,int h, int newcolor, bool invis);
+				bool collision(Player p1, float Xtemp, float Ytemp);
+                int getHealth(void);
+				void setHealth(int i);
+				bool isMoving();
+				bool isJump();
+                float getX(void);
+                float getY(void);
+				float getX2(void);
+                float getY2(void);
+				void setX(float);
+				void setY(float);
+				void setXBull(float);
+				void setYBull(float);
+                void startMoving(void);
+                void stopMoving(void);
+				void setUpTextures();
+                void update();
+                void draw();
+				void setJump(bool);
+				float jump();
+				void setUpTexturesPlatforms();
+				void setUpTexturesPlayer();
+				void moveObjects();
+				void setUpTexturesHealth();
+				void setUpTexturesStars();
+				void setUpTextureBackGround();
+				void setUpTexturesEnemy();
+				void setUpTexturesStartScreen();
+				void setUpTexturesBullet();
+				void setUpTexturesTurret();
+				void movingCollision(Player p1, float Xtemp, float Ytemp);
+				void setnoJump();
+				int getDirection();
+				void setDirection(int i);
+				void shoot(int xnew , int ynew);
+				bool hasGun();
+				bool isBull();
+				int getTime();
+				void setTime(int newTime);
+				bool isInvi();
+				void setUpTexturesScore1();
+				void setUpTexturesScore2();
+				void setUpTexturesScore3();
+				void setUpTexturesScore4();
+				void setUpTexturesScore5();
+				void setColor(int co);
+};
